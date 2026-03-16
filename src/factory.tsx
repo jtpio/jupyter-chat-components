@@ -8,7 +8,7 @@ import { ReadonlyPartialJSONValue } from '@lumino/coreutils';
 
 import * as React from 'react';
 
-import { ToolCall } from './components';
+import { InlineDiff, ToolCall } from './components';
 
 import { ComponentRegistry } from './registry';
 
@@ -117,6 +117,7 @@ export class RendererFactory implements IComponentsRendererFactory {
   constructor() {
     this.registry = new ComponentRegistry();
     this.registry.add('tool-call', ToolCall);
+    this.registry.add('inline-diff', InlineDiff);
   }
 
   createRenderer = (options: IRenderMime.IRendererOptions) => {
