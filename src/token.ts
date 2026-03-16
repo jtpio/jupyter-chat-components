@@ -1,5 +1,7 @@
 import { IRenderMime } from '@jupyterlab/rendermime-interfaces';
 
+import { TranslationBundle } from '@jupyterlab/translation';
+
 import { Token } from '@lumino/coreutils';
 
 import * as React from 'react';
@@ -10,14 +12,6 @@ import * as React from 'react';
 export const IComponentsRendererFactory = new Token<IComponentsRendererFactory>(
   'jupyter-chat-components:IComponentsRendererFactory',
   'The chat components renderer factory'
-);
-
-/**
- * The token providing the chat components registry.
- */
-export const IComponentRegistry = new Token<IComponentRegistry>(
-  'jupyter-chat-components:IComponentRegistry',
-  'The chat components registry'
 );
 
 /**
@@ -32,6 +26,11 @@ export type ToolCallApproval =
  */
 export interface IComponentsRendererFactory
   extends IRenderMime.IRendererFactory {
+  /**
+   * The registry of React components available for rendering.
+   */
+  registry: IComponentRegistry;
+
   /**
    * The callback to approve or reject a tool.
    */
@@ -72,4 +71,14 @@ export interface IComponentRegistry {
    * @returns Array of component names
    */
   getNames(): string[];
+}
+
+/**
+ * The minimal required properties for the component.
+ */
+export interface IComponentProps {
+  /**
+   * The translation bundle.
+   */
+  trans: TranslationBundle;
 }
