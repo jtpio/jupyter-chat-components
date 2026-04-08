@@ -2,6 +2,30 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.3.0
+
+([Full Changelog](https://github.com/brichet/jupyter-chat-components/compare/v0.2.0...5c747a08eafda31663b8109f6162ac2355060b97))
+
+### Enhancements made
+
+- Support showing diffs for notebook cells [#11](https://github.com/brichet/jupyter-chat-components/pull/11) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Add message queue component [#9](https://github.com/brichet/jupyter-chat-components/pull/9) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+
+### Documentation improvements
+
+- Demo diff truncation [#8](https://github.com/brichet/jupyter-chat-components/pull/8) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+
+### Contributors to this release
+
+The following people contributed discussions, new ideas, code and documentation contributions, and review.
+See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
+
+([GitHub contributors page for this release](https://github.com/brichet/jupyter-chat-components/graphs/contributors?from=2026-03-16&to=2026-04-08&type=c))
+
+@brichet ([activity](https://github.com/search?q=repo%3Abrichet%2Fjupyter-chat-components+involves%3Abrichet+updated%3A2026-03-16..2026-04-08&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Abrichet%2Fjupyter-chat-components+involves%3Ajtpio+updated%3A2026-03-16..2026-04-08&type=Issues)) | @Yahiewi ([activity](https://github.com/search?q=repo%3Abrichet%2Fjupyter-chat-components+involves%3AYahiewi+updated%3A2026-03-16..2026-04-08&type=Issues))
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.2.0
 
 ([Full Changelog](https://github.com/brichet/jupyter-chat-components/compare/v0.1.3...fdc674aef4eff77d03f031ca4d5e00aeeb90490c))
@@ -24,8 +48,6 @@ See [our definition of contributors](https://github-activity.readthedocs.io/en/l
 ([GitHub contributors page for this release](https://github.com/brichet/jupyter-chat-components/graphs/contributors?from=2026-03-10&to=2026-03-16&type=c))
 
 @brichet ([activity](https://github.com/search?q=repo%3Abrichet%2Fjupyter-chat-components+involves%3Abrichet+updated%3A2026-03-10..2026-03-16&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Abrichet%2Fjupyter-chat-components+involves%3Ajtpio+updated%3A2026-03-10..2026-03-16&type=Issues))
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.3
 
