@@ -96,11 +96,67 @@ export interface IComponentProps {
 }
 
 /**
- * A single file diff entry.
+ * A file diff target.
+ */
+export interface IInlineDiffFileTarget {
+  /**
+   * Discriminator for a regular file diff target.
+   */
+  kind: 'file';
+  /**
+   * Path of the file being diffed.
+   */
+  path: string;
+}
+
+/**
+ * A notebook cell diff target.
+ */
+export interface IInlineDiffNotebookCellTarget {
+  /**
+   * Discriminator for a notebook cell source diff target.
+   */
+  kind: 'cell';
+  /**
+   * Path of the notebook containing the cell.
+   */
+  notebookPath: string;
+  /**
+   * Stable cell identifier, when available from the producer.
+   */
+  cellId?: string;
+  /**
+   * Zero-based notebook cell index used for the default display label.
+   */
+  cellIndex?: number;
+}
+
+/**
+ * A supported inline diff target.
+ */
+export type IInlineDiffTarget =
+  | IInlineDiffFileTarget
+  | IInlineDiffNotebookCellTarget;
+
+/**
+ * A single inline diff entry.
  */
 export interface IInlineDiff {
-  path: string;
+  /**
+   * Structured target metadata.
+   */
+  target: IInlineDiffTarget;
+  /**
+   * Optional explicit label for the diff header.
+   */
+  label?: string;
+  /**
+   * Updated text content for the diff target.
+   */
   newText: string;
+  /**
+   * Previous text content for the diff target.
+   */
   oldText?: string;
 }
 
@@ -108,6 +164,9 @@ export interface IInlineDiff {
  * Metadata for rendering inline diffs.
  */
 export interface IInlineDiffMetadata {
+  /**
+   * List of inline diff entries to render.
+   */
   diffs: IInlineDiff[];
 }
 
